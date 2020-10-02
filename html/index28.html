@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="formulario" style="margin-bottom: 15px;">
+      <form>
+        <p>
+          <label>Informe o cep: </label>
+          <input data-js="inputCep" type="text">
+          <button data-js="buttonEnviar" type="submit">Consultar Cep</button>
+        </p>        
+      </form>
+    </div>
+
+    <div data-js="status" style="margin-bottom: 15px;">
+      <p>
+        Status
+      </p>
+    </div>
+
+    <div class="resultado">
+      <p>
+       <strong>Logradouro:</strong> <span data-js="logradouro"></span>
+      </p>
+
+      <p>
+        <strong>Bairro:</strong> <span data-js="bairro"></span>
+       </p>
+
+       <p>
+        <strong>Estado:</strong> <span data-js="estado"></span>
+       </p>
+
+       <p>
+        <strong>Cidade:</strong> <span data-js="cidade"></span>
+       </p>
+
+       <p>
+        <strong>Cep:</strong> <span data-js="cep"></span>
+       </p>
+    </div>
+
+    <script src="..\js\exercicio28.js"></script>
+  </body>
+</html>

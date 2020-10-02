@@ -22,11 +22,35 @@
     Só passe para o próximo problema quando tiver resolvido o anterior :)
     */
     // ?
+    function DOM(elements){
+        this.element = this.getDOMElements(elements);
+    }
+
+    DOM.prototype.getDOMElements = function getDOMElements(elements){
+        return doc.querySelectorAll(elements);
+    };
+
+    DOM.prototype.on = function on(eventType, callback){
+        Array.prototype.forEach.call(this.element, function(element){
+            element.addEventListener(eventType, callback, false);
+        });    
+    };
+
+    DOM.prototype.off = function off(eventType, callback){
+        Array.prototype.forEach.call(this.element, function(element){
+            element.removeEventListener(eventType, callback, false);
+        });    
+    };
+
+    DOM.prototype.get = function get(){
+        return this.element;
+    };
 
     var $a = new DOM('[data-js="link"]');
-    $a.on('click', function(e) {
-    e.preventDefault();
-    console.log('clicou');
+    $a.on('click', function handleClick(e) {
+        e.preventDefault();
+        console.log('clicou');
+        $a.off('click',handleClick);
     });
 
     console.log('Elementos selecionados:', $a.get());
