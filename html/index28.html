@@ -6,7 +6,7 @@
   </head>
   <body>
     <div class="formulario" style="margin-bottom: 15px;">
-      <form>
+      <form data-js="formCep">
         <p>
           <label>Informe o cep: </label>
           <input data-js="inputCep" type="text">
@@ -15,9 +15,8 @@
       </form>
     </div>
 
-    <div data-js="status" style="margin-bottom: 15px;">
-      <p>
-        Status
+    <div style="margin-bottom: 15px;">
+      <p data-js="status">
       </p>
     </div>
 
@@ -42,7 +41,11 @@
         <strong>Cep:</strong> <span data-js="cep"></span>
        </p>
     </div>
+    <div>
+      <button data-js="buttonLimpar">Limpar Informações</button>
+    </div>
 
+    <script src="..\js\dom.js"></script>
     <script src="..\js\exercicio28.js"></script>
   </body>
 </html>
