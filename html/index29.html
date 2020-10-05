@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen" />
+  </head>
+  <body>
+    <div class="informacoes">
+        <h3>
+            <span data-js="company-name"></span>
+            <span data-js="company-fone"></span>
+        </h3>
+    </div>
+
+    <div class="formulario" style="margin-bottom: 15px;">
+        <form data-js="form-register" action="/">
+            <ul>
+                <li>
+                    <label>Imagem do carro</label>
+                    <input data-js="image" type="url"/>
+                </li>
+                <li>
+                    <label>Marca / Modelo</label>
+                    <input data-js="brand-model" type="text"/>
+                </li>
+                <li>
+                    <label>Ano</label>
+                    <input data-js="year" type="text"/>
+                </li>
+                <li>
+                    <label>Placa</label>
+                    <input data-js="plate" type="text"/>
+                </li>
+                <li>
+                    <label>Cor</label>
+                    <input data-js="color" type="text"/>
+                </li>
+                <li>
+                    <button type="submit">Cadastrar</button>
+                </li>
+            </ul>
+        </form>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <td>Imagem do carro</td>
+                <td>Marca / Modelo</td>
+                <td>Ano</td>
+                <td>Placa</td>
+                <td>Cor</td>                
+            </tr>
+        </thead>
+
+        <tbody data-js="table-car">
+
+        </tbody>
+    </table>
+
+    <script src="..\js\dom.js"></script>
+    <script src="..\js\exercicio29.js"></script>
+  </body>
+</html>

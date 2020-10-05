@@ -21,8 +21,12 @@
         });    
     };
 
-    DOM.prototype.get = function get(){
-        return this.element;
+    DOM.prototype.get = function get(index){
+        if(!index){
+            return this.element[0];
+        }
+
+        return this.element[index];
     };
 
     DOM.prototype.forEach = function forEach(){
@@ -53,31 +57,31 @@
         return Array.prototype.some.apply(this.element, arguments);
     };
 
-    DOM.prototype.isArray = function isArray(){
+    DOM.isArray = function isArray(){
         return Object.prototype.toString.call( param ) === '[object Array]';
     };
 
-    DOM.prototype.isObject = function isObject(){
+    DOM.isObject = function isObject(){
         return Object.prototype.toString.call( param ) === '[object Object]';
     };
 
-    DOM.prototype.isFunction = function isFunction(){
+    DOM.isFunction = function isFunction(){
         return Object.prototype.toString.call( param ) === '[object Function]';
     };
 
-    DOM.prototype.isNumber = function isNumber(){
+    DOM.isNumber = function isNumber(){
         return Object.prototype.toString.call( param ) === '[object Number]';
     };
 
-    DOM.prototype.isString = function isString(){
+    DOM.isString = function isString(){
         return Object.prototype.toString.call( param ) === '[object String]';
     };
 
-    DOM.prototype.isBoolean = function isBoolean(){
+    DOM.isBoolean = function isBoolean(){
         return Object.prototype.toString.call( param ) === '[object Boolean]';
     };
 
-    DOM.prototype.isNull = function isNull(){
+    DOM.isNull = function isNull(){
         return Object.prototype.toString.call( param ) === '[object Null]'
                 || Object.prototype.toString.call( param ) === '[object Undefined]';
     };

@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+li{
+    margin-bottom: 10px;
+    list-style-type: none;
+}
+
+input {
+    display: block;
+  }
+
+ul {
+    width: 295px;
+}
+
+form, table{
+    float: left;
+    width: 50%;
+}
+
+h3{
+    text-align: center;
+}
+
+img{
+    max-width: 100px;
+    max-height: 100px;
+}
